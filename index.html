@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>San Juan Houses | Inmobiliaria con respaldo legal y notarial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F4;--surface:#FFFFFF;--ink:#14232E;--muted:#4D5E69;--line:#D3DAD7;
+  --brand:#1B3B36;--brand-ink:#FFFFFF;--sun:#E0A526;--sun-ink:#2A1E00;--field:#FFFFFF;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1A21;--surface:#16262F;--ink:#E8EEEC;--muted:#A3B3B9;--line:#2A3D47;
+  --brand:#0A1F1B;--brand-ink:#F3F5F4;--sun:#E7B445;--sun-ink:#2A1E00;--field:#0E1A21;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1A21;--surface:#16262F;--ink:#E8EEEC;--muted:#A3B3B9;--line:#2A3D47;--brand:#0A1F1B;--brand-ink:#F3F5F4;--sun:#E7B445;--sun-ink:#2A1E00;--field:#0E1A21;color-scheme:dark}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,Arial,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;line-height:1.08;margin:0 0 .5em;letter-spacing:-.015em}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:700}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font:800 1.2rem "Bricolage Grotesque",Arial,sans-serif;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--sun)}
+nav{display:flex;gap:20px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;border:0;border-radius:6px;padding:14px 22px;font:600 1rem "Public Sans",Arial,sans-serif;cursor:pointer;text-decoration:none;background:var(--sun);color:var(--sun-ink)}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+/* hero */
+.hero{background:var(--brand);color:var(--brand-ink);padding:84px 0 0;overflow:hidden}
+.hero p{font-size:1.15rem;opacity:.88}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.skyline{display:block;width:100%;height:auto;margin-top:56px}
+.creds{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0;padding:0;list-style:none}
+.creds li{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font-size:.92rem}
+/* about */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px}
+.mvv h3{margin-bottom:.25em}
+.mvv div+div{margin-top:20px}
+.ph{border:2px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:20px;font-size:.95rem}
+.avatar{aspect-ratio:4/5;margin-bottom:16px}
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.services .card{border-top:4px solid var(--sun)}
+.services p{font-size:.97rem;color:var(--muted);margin:0}
+/* process */
+.steps{counter-reset:s;list-style:none;margin:32px 0 0;padding:0;display:grid;gap:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.steps li:before{content:counter(s);font:800 2rem "Bricolage Grotesque",Arial,sans-serif;color:var(--sun)}
+.steps h3{margin-bottom:.2em}
+.steps p{margin:0;color:var(--muted)}
+/* props */
+.props{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.prop{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.prop .ph{border:0;border-radius:0;border-bottom:2px dashed var(--line);aspect-ratio:4/3}
+.prop div.b{padding:16px 18px}
+.prop h3{font-size:1.05rem;margin:0 0 .2em}
+.prop p{margin:0;color:var(--muted);font-size:.93rem}
+.video{aspect-ratio:16/9;margin-top:32px}
+/* form */
+.contact{background:var(--brand);color:var(--brand-ink)}
+.contact p{opacity:.88}
+form{background:var(--surface);color:var(--ink);border-radius:10px;padding:26px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+input,select,textarea{font:400 1rem "Public Sans",Arial,sans-serif;background:var(--field);color:var(--ink);border:1.5px solid var(--line);border-radius:6px;padding:12px 13px;width:100%}
+textarea{min-height:90px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hint{font-weight:400;color:var(--muted);font-size:.85rem}
+.ok{display:none;background:var(--bg);border-left:5px solid var(--sun);padding:16px 18px;border-radius:6px}
+.ok.on{display:block}
+.ok p{margin:0 0 .6em}
+footer{padding:36px 0;font-size:.92rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{margin-right:16px}
+@media(max-width:820px){
+  .two,.row,.props{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr}
+  nav{display:none}
+  section{padding:56px 0}
+}
+@media(max-width:480px){.services{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#inicio">San Juan <span>Houses</span></a>
+  <nav aria-label="Principal"><a href="#quien">Quién soy</a><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajo</a><a href="#propiedades">Propiedades</a></nav>
+  <a class="btn" href="#contacto">Consultar</a>
+</div></header>
+
+<main>
+<section class="hero" id="inicio" style="padding-bottom:0"><div class="wrap">
+  <h1>Comprá y vendé con respaldo legal desde el primer día.</h1>
+  <p>Inmobiliaria en San Juan especializada en compraventa. Te acompaño desde la tasación hasta la escritura, con un solo profesional a cargo.</p>
+  <ul class="creds"><li>Corredor inmobiliario</li><li>Abogado</li><li>Escribano</li><li>Asesor contable</li></ul>
+  <div class="cta"><a class="btn" href="#contacto">Contame qué buscás</a><a class="btn ghost" href="#propiedades">Ver propiedades</a></div>
+</div>
+<svg class="skyline" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 140V92L90 60L170 96L260 40L350 88L430 62L520 100L620 30L710 84L800 56L900 98L990 48L1090 90L1200 64V140Z" fill="#E0A526" opacity=".22"/>
+  <path d="M0 140V112L120 84L220 110L330 78L440 112L560 70L680 114L800 88L920 116L1040 82L1200 112V140Z" fill="var(--bg)"/>
+</svg></section>
+
+<section id="quien"><div class="wrap two">
+  <div>
+    <h2>Quién está detrás de San Juan Houses</h2>
+    <p>Soy [Nombre y apellido], CEO y fundador de San Juan Houses. Soy corredor inmobiliario, abogado y escribano, y estoy cursando la carrera de contador público.</p>
+    <p>Por eso puedo orientarte en toda la operación: la parte comercial, la tramitación legal, la escritura y el enfoque contable. Todo con la misma persona.</p>
+    <p><a href="#" id="lk" style="font-weight:600">Ver mi perfil profesional en LinkedIn</a></p>
+    <div class="card mvv" style="margin-top:24px">
+      <div><h3>Historia</h3><p>San Juan Houses nació para unir en un solo lugar el corretaje inmobiliario y el respaldo legal y notarial. Surgió de ver operaciones que se complicaban por acuerdos verbales y documentación sin revisar. <em>(Texto de ejemplo para la demo.)</em></p></div>
+      <div><h3>Misión</h3><p>Acompañar a cada cliente en su operación inmobiliaria con claridad, seguridad jurídica y trato personal. <em>(Ejemplo.)</em></p></div>
+      <div><h3>Visión</h3><p>Ser la inmobiliaria de referencia en San Juan por su respaldo profesional. <em>(Ejemplo.)</em></p></div>
+    </div>
+  </div>
+  <div>
+    <div class="ph avatar">Foto profesional<br>(a reemplazar)</div>
+    <div class="card"><strong>Matrícula profesional</strong><br>Corredor inmobiliario: [N.º de matrícula]<br>Colegio profesional: [nombre]</div>
+  </div>
+</div></section>
+
+<section id="servicios" style="background:var(--surface)"><div class="wrap">
+  <h2>Asesoramiento integral en una sola mano</h2>
+  <p style="color:var(--muted)">Mi foco es la compraventa de inmuebles. Cada operación se cuida en cuatro frentes.</p>
+  <div class="services">
+    <div class="card"><h3>Corretaje</h3><p>Te muestro y negocio la propiedad para que llegues al mejor acuerdo entre las partes.</p></div>
+    <div class="card"><h3>Legal</h3><p>Reviso títulos, autorizaciones y contratos para que nada quede librado a la palabra.</p></div>
+    <div class="card"><h3>Notarial</h3><p>Te guío en la tramitación hasta la escritura y la inscripción en el registro.</p></div>
+    <div class="card"><h3>Contable</h3><p>Orientación sobre costos, impuestos y gastos de la operación.</p></div>
+  </div>
+</div></section>
+
+<section id="proceso"><div class="wrap">
+  <h2>Cómo trabajo: todo por escrito</h2>
+  <p style="color:var(--muted)">Una operación clara protege a vendedores y compradores. Estos son los pasos.</p>
+  <ol class="steps">
+    <li><div><h3>Autorización de venta o de compra, con exclusividad</h3><p>Antes de cualquier contrato firmamos una autorización por escrito, con exclusividad por un plazo definido (por ejemplo, seis meses). Así queda claro quién es el titular, quién autoriza la venta y quién trabaja la propiedad.</p></div></li>
+    <li><div><h3>Propiedad en condiciones</h3><p>Verifico titularidad, planos y documentación. Si algo está desactualizado, lo resolvemos antes o lo dejamos previsto en la escritura.</p></div></li>
+    <li><div><h3>Visitas y negociación</h3><p>Muestro la propiedad, recibo ofertas y las llevo a la otra parte hasta acordar un precio.</p></div></li>
+    <li><div><h3>Escritura y cierre</h3><p>Te acompaño en la tramitación notarial hasta que la operación queda inscripta.</p></div></li>
+  </ol>
+</div></section>
+
+<section id="propiedades" style="background:var(--surface)"><div class="wrap">
+  <h2>Propiedades destacadas</h2>
+  <p style="color:var(--muted)">Fotos y datos de cada propiedad. Los videos recorridos están en Instagram. Las propiedades de esta sección son ejemplos para la demo.</p>
+  <div class="props">
+    <article class="prop"><div class="ph">Foto de la propiedad</div><div class="b"><h3>Casa en Rivadavia</h3><p>3 dormitorios · 220 m² cubiertos · USD 95.000 (ejemplo)</p></div></article>
+    <article class="prop"><div class="ph">Foto de la propiedad</div><div class="b"><h3>Terreno en Marquesado</h3><p>600 m² · Apto para construir · USD 40.000 (ejemplo)</p></div></article>
+    <article class="prop"><div class="ph">Foto de la propiedad</div><div class="b"><h3>Departamento en Capital</h3><p>2 ambientes · 58 m² · USD 62.000 (ejemplo)</p></div></article>
+  </div>
+  <div class="ph video">Video de presentación (enlace de YouTube o Instagram)</div>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap two">
+  <div>
+    <h2>Contame qué necesitás</h2>
+    <p>Completá el formulario y te respondo personalmente. Si estoy mostrando una propiedad, tu consulta queda registrada y te contacto apenas me libero.</p>
+    <p>Indicar un monto estimado me ayuda a entender tu consulta y a priorizarla.</p>
+  </div>
+  <form id="f" novalidate>
+    <label>Nombre y apellido<input name="nombre" required autocomplete="name"></label>
+    <div class="row">
+      <label>Correo electrónico<input type="email" name="email" required autocomplete="email"></label>
+      <label>Teléfono o WhatsApp<input type="tel" name="tel" autocomplete="tel"></label>
+    </div>
+    <div class="row">
+      <label>Quiero<select name="interes" required><option value="">Elegí una opción</option><option>Comprar</option><option>Vender mi propiedad</option><option>Asesoramiento legal o notarial</option></select></label>
+      <label>Monto estimado<select name="monto" required><option value="">Elegí un rango</option><option value="a">Hasta USD 30.000</option><option value="b">USD 30.000 a 80.000</option><option value="c">USD 80.000 a 150.000</option><option value="d">Más de USD 150.000</option><option value="n">Todavía no lo sé</option></select></label>
+    </div>
+    <label>Mensaje <span class="hint">(opcional)</span><textarea name="msg"></textarea></label>
+    <button class="btn" type="submit">Enviar consulta</button>
+    <div class="ok" id="ok" role="status" aria-live="polite"></div>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div>© San Juan Houses · San Juan, Argentina<br>sanjuanhouses.com.ar<br>Matrícula: [N.º]</div>
+  <div><a href="#" id="ig">Instagram</a><a href="#" id="li">LinkedIn</a><a href="#" id="wa">WhatsApp</a></div>
+</div></footer>
+
+<script>
+// Datos a completar
+var CONFIG={email:"contacto@sanjuanhouses.com.ar",whatsapp:"",instagram:"#",linkedin:"#"};
+["ig","li","wa","lk"].forEach(function(id){var e=document.getElementById(id);
+  e.href=id==="ig"?CONFIG.instagram:id==="wa"?(CONFIG.whatsapp?"https://wa.me/"+CONFIG.whatsapp:"#contacto"):CONFIG.linkedin;});
+document.getElementById("f").addEventListener("submit",function(ev){
+  ev.preventDefault();
+  var f=ev.target,d=new FormData(f),ok=document.getElementById("ok");
+  var nombre=(d.get("nombre")||"").trim(),email=(d.get("email")||"").trim();
+  if(!nombre||!/^\S+@\S+\.\S+$/.test(email)||!d.get("interes")||!d.get("monto")){
+    ok.className="ok on";ok.innerHTML="<p>Completá nombre, un correo válido, qué querés hacer y un rango de monto.</p>";return;}
+  var prioridad=(d.get("monto")==="c"||d.get("monto")==="d")?"PRIORITARIA":"General";
+  var cuerpo="Prioridad: "+prioridad+"\nNombre: "+nombre+"\nCorreo: "+email+"\nTeléfono: "+(d.get("tel")||"-")+
+    "\nInterés: "+d.get("interes")+"\nMonto: "+f.monto.options[f.monto.selectedIndex].text+"\nMensaje: "+(d.get("msg")||"-");
+  var url="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("["+prioridad+"] Consulta web: "+nombre)+"&body="+encodeURIComponent(cuerpo);
+  ok.className="ok on";
+  ok.innerHTML="<p><strong>Gracias, "+nombre.split(" ")[0]+".</strong> Para terminar, enviá la consulta desde tu correo.</p><p><a class='btn' href='"+url+"'>Abrir mi correo y enviar</a></p>";
+});
+</script>
+</body>
+</html>
